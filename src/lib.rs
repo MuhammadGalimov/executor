@@ -18,7 +18,7 @@ impl Executor {
 
                 match task {
                     Ok(rx) => { (rx)(); }
-                    Err(_) => { break; }
+                    Err(_) => { continue; }
                 }
             });
         }
